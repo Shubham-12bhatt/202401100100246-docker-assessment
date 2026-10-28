@@ -1,7 +1,7 @@
 FROM python:3.13-slim
 
 WORKDIR /app
-ENV APP_VERSION=1.0.0
+ENV APP_VERSION=1.0.1
 
 COPY requirements.txt .
 
