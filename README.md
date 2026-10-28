@@ -1,13 +1,12 @@
-
 ## Stage 3 — Container Security Scanning
 
 ### Trivy Vulnerability Comparison
 
-| Metric | Before (fest-backend:0.1) | After (fest-backend:0.2) |
-|---|---|---|
-| HIGH Vulnerabilities | 2249 | 49 |
-| CRITICAL Vulnerabilities | 234 | 0 |
-| Docker Image Disk Usage | 1.61 GB | 219 MB |
+| Metric                   | Before (fest-backend:0.1) | After (fest-backend:0.2) |
+| ------------------------ | ------------------------- | ------------------------ |
+| HIGH Vulnerabilities     | 2249                      | 49                       |
+| CRITICAL Vulnerabilities | 234                       | 0                        |
+| Docker Image Disk Usage  | 1.61 GB                   | 219 MB                   |
 
 ### Security Improvements
 
@@ -31,4 +30,23 @@ Exit code: `0` (Passed)
 - Updated scan: `reports/trivy-after.txt`
 - Initial screenshot: `screenshots/S3-1.png`
 - Final screenshot: `screenshots/S3-3.png`
-  
+
+## Stage 4 — Docker Hub Release
+
+Docker Hub Repository: https://hub.docker.com/r/zoro69bhatt/fest-backend
+
+### Published Image Tags
+
+- `zoro69bhatt/fest-backend:1.0.0`
+- `zoro69bhatt/fest-backend:1.0`
+
+### Version 1.0.0 Digest
+
+`sha256:b86609bbe1eed77d1460461147bc70895b5feec615ad5a16c57b4a8371384c94`
+
+Both tags reference the same Docker image.
+
+### Evidence
+
+- `screenshots/S4-1.png` — Successful Docker Hub pushes and digests.
+- `screenshots/S4-2.png` — Docker Hub repository Tags page.
